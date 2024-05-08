@@ -12,13 +12,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-        create: (BuildContext context) => TaskData(),
-        child: MaterialApp(
+        create: (BuildContext context) =>
+        TaskData()..initDataFromSharedPreferences(),
+        child: const MaterialApp(
+          debugShowCheckedModeBanner: false,
+          restorationScopeId: 'root',
           home: TasksScreen(),
         ));
   }

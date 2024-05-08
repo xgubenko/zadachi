@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/task_data.dart';
 import '../widgets/tasks_list.dart';
@@ -12,9 +11,9 @@ class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.blueGrey,
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.lightBlueAccent,
+          backgroundColor: Colors.blueGrey,
           foregroundColor: Colors.white,
           hoverColor: Colors.blue,
           onPressed: () {
@@ -37,7 +36,7 @@ class TasksScreen extends StatelessWidget {
                     backgroundColor: Colors.white,
                     radius: 30,
                     child: Icon(Icons.list,
-                        size: 30, color: Colors.lightBlueAccent),
+                        size: 30, color: Colors.blueGrey),
                   ),
                   const SizedBox(height: 10),
                   const Text("Задачи",

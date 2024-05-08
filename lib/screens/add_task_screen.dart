@@ -24,7 +24,7 @@ class AddTaskScreen extends StatelessWidget {
             const Text(
               "Добавить задачу",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 30, color: Colors.lightBlueAccent),
+              style: TextStyle(fontSize: 30, color: Colors.blueGrey),
             ),
             TextField(
               autofocus: true,
@@ -32,11 +32,11 @@ class AddTaskScreen extends StatelessWidget {
               onChanged: (String newText) {
                 newTaskTitle = newText;
               },
-              cursorColor: Colors.lightBlueAccent,
-              style: TextStyle(color: Colors.lightBlueAccent),
+              cursorColor: Colors.blueGrey,
+              style: TextStyle(color: Colors.blueGrey),
             ),
             MaterialButton(
-              color: Colors.lightBlueAccent,
+              color: Colors.blueGrey,
               onPressed: () {
                 Provider.of<TaskData>(context, listen: false).addTask(newTaskTitle);
                 Navigator.pop(context);
